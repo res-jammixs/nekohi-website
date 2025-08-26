@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About the Devs — Nekohi</title>
+  <style>
+    :root {
+      --brand: #ff6b35;
+      --text: #222;
+      --muted: #666;
+      --bg: #f8f8f8;
+      --card: #fff;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; color: var(--text); background: var(--bg); }
+    header { background: linear-gradient(135deg, var(--brand), #ff9366); color: #fff; padding: 64px 20px; text-align: center; }
+    header h1 { margin: 0 0 8px; font-size: clamp(28px, 4vw, 44px); }
+    header p { margin: 0; opacity: 0.95; font-size: clamp(14px, 2.2vw, 18px); }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 28px 20px 60px; }
+
+    .intro { text-align: center; margin: 28px auto 8px; color: var(--muted); }
+
+    .grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 20px; }
+
+    .card { grid-column: span 12; background: var(--card); border-radius: 16px; padding: 20px; box-shadow: 0 6px 24px rgba(0,0,0,0.06); display: flex; align-items: center; gap: 16px; }
+    .card img { width: 88px; height: 88px; border-radius: 14px; object-fit: cover; flex: 0 0 auto; }
+    .card h3 { margin: 0 0 6px; font-size: 20px; }
+    .card p { margin: 0; color: var(--muted); }
+
+    @media (min-width: 720px) {
+      .card { grid-column: span 6; }
+    }
+
+    .skills { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .pill { background: #f1f1f1; color: #333; padding: 6px 10px; border-radius: 999px; font-size: 12px; }
+
+    footer { text-align: center; color: var(--muted); padding: 24px; font-size: 14px; }
+    .cta { display: inline-block; margin-top: 18px; background: var(--brand); color: #fff; padding: 10px 16px; border-radius: 10px; text-decoration: none; }
+    .cta:hover { filter: brightness(0.95); }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Meet the Developers</h1>
+    <p>We build Nekohi with clean code, good coffee, and way too many cat pics.</p>
+    <a class="cta" href="/">← Back to Home</a>
+  </header>
+
+  <main class="container">
+    <p class="intro">Add your teammates below. Replace avatars, names, roles, bios, and skills. Duplicate a card for more members.</p>
+
+    <section class="grid" aria-label="Team">
+      <!-- Dev Card 1 -->
+      <article class="card">
+        <img src="https://picsum.photos/200?random=12" alt="Avatar of James" />
+        <div>
+          <h3>James Restauro</h3>
+          <p>Frontend Developer • Focus: UI/UX, HTML/CSS/JS</p>
+          <div class="skills">
+            <span class="pill">HTML</span>
+            <span class="pill">CSS</span>
+            <span class="pill">JavaScript</span>
+            <span class="pill">Git</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Dev Card 2 -->
+      <article class="card">
+        <img src="https://picsum.photos/200?random=21" alt="Avatar of Teammate" />
+        <div>
+          <h3>Teammate Name</h3>
+          <p>Backend Developer • Focus: APIs, Databases</p>
+          <div class="skills">
+            <span class="pill">Node.js</span>
+            <span class="pill">Express</span>
+            <span class="pill">MongoDB</span>
+            <span class="pill">GitHub</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Duplicate more <article class="card"> blocks as needed -->
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Nekohi • Built with love and caffeine ☕
+  </footer>
+</body>
+</html>

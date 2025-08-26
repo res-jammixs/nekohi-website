@@ -15,16 +15,42 @@
     header {
       background: red;
       color: white;
-      padding: 40px 20px;
+      padding: 20px;
     }
     header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+      margin: 10px 0 5px;
+      font-size: 2rem;
     }
     header p {
-      margin: 10px 0 0;
-      font-size: 1.2rem;
+      margin: 5px 0 15px;
+      font-size: 1rem;
     }
+
+    /* Navbar */
+    nav {
+      margin-top: 10px;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    nav ul li {
+      display: inline;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ffd700;
+    }
+
     main {
       padding: 40px 20px;
     }
@@ -55,10 +81,17 @@
   <header>
     <h1>Welcome to Your Website</h1>
     <p>A short tagline about what you do</p>
+
+    <nav>
+      <ul>
+        <li><a href="#about-devs">About the Devs</a></li>
+        <li><a href="#login">Login / Signup</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <h2>About Us</h2>
+    <h2 id="about-devs">About Us</h2>
     <p>This is a simple landing page template. You can add your services, products, or any other details here.</p>
     <a href="#contact" class="btn">Get Started</a>
   </main>
